@@ -4,6 +4,8 @@ import static com.evillcat.chorusapp.service.db.SubscriptionServiceTestUtil.SUB_
 import static org.junit.Assert.*;
 
 import com.evillcat.chorusapp.ChorusappApplication;
+import com.evillcat.chorusapp.service.MemberService;
+import com.evillcat.chorusapp.service.SubscriptionService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

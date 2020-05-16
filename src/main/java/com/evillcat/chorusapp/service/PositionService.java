@@ -1,4 +1,4 @@
-package com.evillcat.chorusapp.service.db;
+package com.evillcat.chorusapp.service;
 
 import com.evillcat.chorusapp.model.Position;
 import com.evillcat.chorusapp.repository.PositionRepository;

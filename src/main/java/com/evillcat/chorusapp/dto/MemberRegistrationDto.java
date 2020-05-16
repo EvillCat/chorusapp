@@ -7,8 +7,6 @@ public class MemberRegistrationDto {
 
     private String phoneNumber;
 
-    private Long positionId;
-
-    private Long groupId;
+    private String name;
 
 }
