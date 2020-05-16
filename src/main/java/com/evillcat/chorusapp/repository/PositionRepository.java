@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PositionRepository extends JpaRepository<Position, Long> {
 
-    @Query("update Position p set p.position = :position where s.id = :id")
+    @Query("update Position p set p.position = :position where p.id = :id")
     void update(@Param("id") Long id, @Param("position") String position);
 }

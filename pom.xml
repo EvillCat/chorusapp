@@ -20,6 +20,8 @@
 		<h2.db.version>1.4.200</h2.db.version>
 		<mapstruct>1.3.1.Final</mapstruct>
 		<flyway>6.3.1</flyway>
+		<mysql>8.0.19</mysql>
+		<h2.db>1.4.200</h2.db>
 	</properties>
 
 	<dependencies>
@@ -76,7 +78,19 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.19</version>
+			<version>${mysql}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.db}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
@@ -94,9 +108,9 @@
 				<version>4.2.0</version>
 				<configuration>
 					<driver>com.mysql.jdbc.Driver</driver>
-					<user></user>
-					<password></password>
-					<url></url>
+					<user>dev</user>
+					<password>jorry143ci</password>
+					<url>jdbc:mysql://212.109.196.120:3306/chorusbot</url>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -140,10 +154,10 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<spring.datasource.url></spring.datasource.url>
+				<spring.datasource.url>jdbc:mysql://212.109.196.120:3306/chorusbot</spring.datasource.url>
 				<spring.datasource.driver-class-name>com.mysql.jdbc.Driver</spring.datasource.driver-class-name>
-				<spring.datasource.username></spring.datasource.username>
-				<spring.datasource.password></spring.datasource.password>
+				<spring.datasource.username>dev</spring.datasource.username>
+				<spring.datasource.password>jorry143ci</spring.datasource.password>
 				<spring.jpa.database-platform>org.hibernate.dialect.MySQLDialect</spring.jpa.database-platform>
 			</properties>
 		</profile>

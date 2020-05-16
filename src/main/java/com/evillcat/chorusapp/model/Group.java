@@ -29,10 +29,10 @@ public class Group {
 
     private String group;
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "groups")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "groups")
     private List<Member> members;
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "groups")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "groups")
     private List<Event> events;
 
 }
